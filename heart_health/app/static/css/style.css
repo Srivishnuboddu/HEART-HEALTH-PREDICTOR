@@ -1,0 +1,178 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.header {
+    background: #008080;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.navbar {
+    margin-top: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0 10px;
+    background: #20b2aa;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: #005f5f;
+}
+
+/* Section styles */
+.intro-section, .about-section, .tips-section, .contact-section {
+    padding: 50px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section, .tips-section, .contact-section {
+    background: #f0f0f0;
+}
+
+.about-section h2, .tips-section h2, .contact-section h2 {
+    color: #008080;
+}
+
+footer {
+    background: #008080;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* List styles */
+.tips-section ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+/* Predict page styles */
+.predict-container {
+    background: #e0f7fa; /* Light cyan background */
+    max-width: 600px; /* Limit the width of the container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.predict-container h1 {
+    text-align: center;
+    color: #00695c; /* Darker teal for the heading */
+    margin-bottom: 20px;
+}
+
+.predict-container label {
+    display: block; /* Stack labels */
+    margin: 10px 0 5px; /* Spacing */
+    color: #00695c; /* Teal color for labels */
+}
+
+.predict-container input[type="number"],
+.predict-container select {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #b2dfdb; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border 0.3s; /* Smooth transition for border */
+}
+
+.predict-container input[type="number"]:focus,
+.predict-container select:focus {
+    border-color: #004d40; /* Darker teal on focus */
+    outline: none; /* Remove default outline */
+}
+
+.predict-container button {
+    background: #00897b; /* Teal button */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s; /* Smooth background transition */
+    width: 100%; /* Full width button */
+}
+
+.predict-container button:hover {
+    background: #004d40; /* Darker teal on hover */
+}
+
+/* Prediction result styles */
+.predict-container h2 {
+    text-align: center;
+    margin-top: 20px; /* Space above the prediction result */
+    color: #d32f2f; /* Red color for the prediction result */
+}
+/* Container for animation - aligns to the right */
+/* Modify the .intro-section to use flexbox */
+.intro-section {
+    display: flex;                /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space out content and GIF */
+    align-items: center;          /* Vertically align items */
+    padding: 50px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro text content styles */
+.intro-content {
+    flex: 1;                      /* Allow intro-content to take available space */
+}
+
+/* Container for animation - now part of the intro-section */
+.animation-container {
+    display: flex;
+    justify-content: flex-end;    /* Align content inside to the right */
+    align-items: center;          /* Center content vertically */
+    flex: 0 0 300px;              /* Fixed width for the GIF container */
+    padding-right: 60px;
+}
+
+/* Keyframes for left-to-right movement */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);    /* Start position */
+    }
+    50% {
+        transform: translateX(100px); /* Move right */
+    }
+    100% {
+        transform: translateX(0);    /* Back to start */
+    }
+}
+
+/* Apply the animation to the GIF */
+.animated-gif {
+    width: 200px;                /* Adjust the size as needed */
+    height: auto;                /* Maintain aspect ratio */
+    animation: moveLeftRight 3s ease-in-out infinite;  /* Animation settings */
+    margin-right: 20px;          /* Space between the GIF and container edge */
+}
+
+
